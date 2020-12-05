@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom" ;
+import { Link ,withRouter } from "react-router-dom" ;
 import axios from "axios";
 
 //
@@ -24,7 +24,7 @@ const ClothesItem = props => (
     </tr>
 )
 
-export default class ItemsList extends Component {
+class ItemsList extends Component {
 
     constructor(props) {
         super(props);
@@ -100,3 +100,5 @@ export default class ItemsList extends Component {
         )
     }
 }
+
+export default withRouter(ItemsList)

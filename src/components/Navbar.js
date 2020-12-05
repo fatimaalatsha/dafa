@@ -11,10 +11,10 @@ export default class Navbar extends Component {
         <Link to="/Homepage" className="navbar-brand">DAFAH</Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto" >
-          <li className="navbar-item" onClick={go}>
+          <li className="navbar-item" >
           <Link to="/AddItems" className="nav-link">Add Items</Link>
           </li>
-          <li className="navbar-item" onClick={goto}>
+          <li className="navbar-item">
           <Link to="/ItemsList" className="nav-link">Clothes</Link>
           </li>
           <li className="navbar-item">
@@ -30,22 +30,22 @@ export default class Navbar extends Component {
     );
   }
 }
- function go (){
-  if (localStorage.length >= 1){
-    window.location = '/AddItems'
-  }
-   else if (localStorage.length < 1){
-    window.location = '/addUser'
-  }
- }
- function goto (){
-  if (localStorage.length > 1){
-    window.location = '/ItemsList'
-  }
-   else if (localStorage.length <= 1){
-    window.location = '/addUser'
-  }
- }
+//  function go (){
+//   if (localStorage.length >= 1){
+//     window.location = '/AddItems'
+//   }
+//    else if (localStorage.length < 1){
+//     window.location = '/addUser'
+//   }
+//  }
+//  function goto (){
+//   if (localStorage.length > 1){
+//     window.location = '/ItemsList'
+//   }
+//    else if (localStorage.length <= 1){
+//     window.location = '/addUser'
+//   }
+//  }
 
  function logout(){
   window.localStorage.clear();

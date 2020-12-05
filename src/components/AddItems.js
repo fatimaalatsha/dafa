@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
-export default class AddItems extends Component {
+import { Link ,withRouter } from "react-router-dom" ;
+
+ class AddItems extends Component {
   constructor(props) {
     super(props);
 
@@ -169,3 +171,5 @@ export default class AddItems extends Component {
     )
   }
 }
+
+export default withRouter(AddItems)
